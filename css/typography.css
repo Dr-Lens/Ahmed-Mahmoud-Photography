@@ -1,0 +1,78 @@
+/* ==========================================================================
+   TYPOGRAPHY — editorial serif display, restrained sans body.
+   Google Fonts loaded with font-display: swap; system fallbacks keep the
+   page fully legible if the network request fails or is blocked.
+   ========================================================================== */
+
+body {
+  background: var(--color-background);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  font-size: var(--fs-body);
+  font-weight: 400;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  line-height: 1.05;
+  letter-spacing: -0.01em;
+  color: var(--color-text);
+}
+
+.type-display-xl { font-size: var(--fs-display-xl); font-weight: 500; }
+.type-display-l   { font-size: var(--fs-display-l); font-weight: 500; }
+.type-display-m   { font-size: var(--fs-display-m); font-weight: 500; }
+.type-display-s   { font-size: var(--fs-display-s); font-weight: 500; }
+
+.type-label {
+  font-family: var(--font-label);
+  font-size: var(--fs-label);
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+  color: var(--color-muted);
+  font-weight: 500;
+}
+
+.type-caption {
+  font-size: var(--fs-caption);
+  color: var(--color-text-dim);
+  font-style: italic;
+  font-family: var(--font-display);
+}
+
+p {
+  color: var(--color-text-dim);
+  font-size: var(--fs-body);
+  line-height: 1.7;
+  max-width: 62ch;
+}
+
+p.lead {
+  font-size: var(--fs-body-l);
+  color: var(--color-text);
+}
+
+.text-accent { color: var(--color-accent); }
+.text-center { text-align: center; }
+.text-balance { text-wrap: balance; }
+
+.serif-italic {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 400;
+}
+
+/* Numerals used only where content is genuinely sequential
+   (the wedding-day story rail) — never as decoration. */
+.numeral {
+  font-family: var(--font-display);
+  font-style: italic;
+  color: var(--color-accent);
+  font-size: 0.85em;
+}
+
+::selection {
+  background: var(--color-accent);
+  color: var(--color-background);
+}

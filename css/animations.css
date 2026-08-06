@@ -1,0 +1,44 @@
+/* ==========================================================================
+   ANIMATION SYSTEM
+   Scroll reveals + entrance sequences driven by IntersectionObserver
+   (see js/animations.js). All rules respect prefers-reduced-motion via
+   the global override in reset.css.
+   ========================================================================== */
+
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity var(--dur-slow) var(--ease-editorial),
+              transform var(--dur-slow) var(--ease-editorial);
+}
+[data-reveal].is-revealed { opacity: 1; transform: none; }
+
+[data-reveal="fade"] { transform: none; }
+
+[data-reveal-group] > * { transition-delay: calc(var(--reveal-index, 0) * 90ms); }
+
+.hero__eyebrow, .hero__title, .hero__statement, .hero__actions {
+  opacity: 0;
+  transform: translateY(22px);
+  animation: heroIn var(--dur-slow) var(--ease-editorial) forwards;
+}
+.hero__eyebrow { animation-delay: 200ms; }
+.hero__title { animation-delay: 340ms; }
+.hero__statement { animation-delay: 520ms; }
+.hero__actions { animation-delay: 680ms; }
+
+@keyframes heroIn {
+  to { opacity: 1; transform: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [data-reveal] { opacity: 1; transform: none; transition: none; }
+  .hero__eyebrow, .hero__title, .hero__statement, .hero__actions {
+    animation: none; opacity: 1; transform: none;
+  }
+}
+
+/* Page transition veil handled inline via .route-veil in layout.css */
+
+.pulse { animation: pulse 1.6s ease-in-out infinite; }
+@keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.45; } }

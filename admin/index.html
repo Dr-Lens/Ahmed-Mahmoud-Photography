@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Admin — Ahmed Mahmoud Photography</title>
+<meta name="robots" content="noindex, nofollow" />
+<script type="module">
+  import { isAuthenticated } from "/js/auth.js";
+  location.replace(isAuthenticated() ? "/admin/dashboard.html" : "/admin/login.html");
+</script>
+</head>
+<body></body>
+</html>

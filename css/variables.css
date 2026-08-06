@@ -1,0 +1,81 @@
+/* ==========================================================================
+   AHMED MAHMOUD PHOTOGRAPHY — DESIGN TOKENS
+   Editorial, cinematic, warm-neutral palette. No frameworks.
+   ========================================================================== */
+
+:root {
+  /* ---- Color: warm near-black editorial palette ---- */
+  --color-background: #0b0b0a;
+  --color-background-alt: #111110;
+  --color-surface: #17161a;
+  --color-surface-solid: #17161a;
+  --color-text: #f3eee4;
+  --color-text-dim: #c9c2b3;
+  --color-muted: #8b8378;
+  --color-border: rgba(243, 238, 228, 0.1);
+  --color-border-strong: rgba(243, 238, 228, 0.22);
+  --color-accent: #b08d57;       /* antique bronze — signature accent */
+  --color-accent-bright: #d3ac74;
+  --color-accent-soft: rgba(176, 141, 87, 0.14);
+  --color-overlay: rgba(6, 6, 5, 0.55);
+  --color-overlay-strong: rgba(6, 6, 5, 0.82);
+  --color-success: #7a9b76;
+  --color-error: #b6614f;
+  --color-focus: #d3ac74;
+
+  /* ---- Typography ---- */
+  --font-display: "Playfair Display", "Iowan Old Style", "Palatino Linotype", Georgia, "Times New Roman", serif;
+  --font-body: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  --font-label: var(--font-body);
+
+  --tracking-label: 0.18em;
+  --tracking-wide: 0.06em;
+
+  /* Fluid type scale */
+  --fs-display-xl: clamp(2.6rem, 7vw, 6.4rem);
+  --fs-display-l: clamp(2.1rem, 5vw, 4.2rem);
+  --fs-display-m: clamp(1.7rem, 3.4vw, 2.8rem);
+  --fs-display-s: clamp(1.3rem, 2.4vw, 1.9rem);
+  --fs-body-l: 1.15rem;
+  --fs-body: 1rem;
+  --fs-body-s: 0.9rem;
+  --fs-label: 0.76rem;
+  --fs-caption: 0.82rem;
+
+  /* ---- Spacing (8px modular scale) ---- */
+  --spacing-unit: 8px;
+  --sp-1: calc(var(--spacing-unit) * 1);
+  --sp-2: calc(var(--spacing-unit) * 2);
+  --sp-3: calc(var(--spacing-unit) * 3);
+  --sp-4: calc(var(--spacing-unit) * 4);
+  --sp-6: calc(var(--spacing-unit) * 6);
+  --sp-8: calc(var(--spacing-unit) * 8);
+  --sp-12: calc(var(--spacing-unit) * 12);
+  --sp-16: calc(var(--spacing-unit) * 16);
+  --sp-24: calc(var(--spacing-unit) * 24);
+
+  /* ---- Layout ---- */
+  --content-max: 1400px;
+  --content-narrow: 760px;
+  --edge-padding: clamp(20px, 5vw, 64px);
+  --nav-height: 84px;
+
+  /* ---- Motion ---- */
+  --ease-editorial: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-out-soft: cubic-bezier(0.16, 1, 0.3, 1);
+  --dur-fast: 220ms;
+  --dur-medium: 480ms;
+  --dur-slow: 900ms;
+
+  /* ---- Elevation / radius (kept minimal — editorial, not app-like) ---- */
+  --radius-s: 2px;
+  --radius-m: 3px;
+  --safe-top: env(safe-area-inset-top, 0px);
+  --safe-bottom: env(safe-area-inset-bottom, 0px);
+  --safe-left: env(safe-area-inset-left, 0px);
+  --safe-right: env(safe-area-inset-right, 0px);
+}
+
+@media (prefers-color-scheme: light) {
+  /* The brand is intentionally dark/editorial in both schemes; we do not flip to a light UI. */
+}

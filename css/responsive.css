@@ -1,0 +1,29 @@
+/* ==========================================================================
+   RESPONSIVE
+   Mobile-first base styles live in the component files; this file holds
+   breakpoint overrides for nav, footer, and grids.
+   ========================================================================== */
+
+@media (max-width: 980px) {
+  .site-nav__links, .site-nav__actions .btn--ghost.desktop-only { display: none; }
+  .site-nav__burger { display: block; }
+
+  .site-footer__top { grid-template-columns: 1fr 1fr; }
+  .grid-3 { grid-template-columns: repeat(2, 1fr); }
+  .grid-4 { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 640px) {
+  .site-footer__top { grid-template-columns: 1fr; gap: var(--sp-6); }
+  .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; }
+  .hero__actions { flex-direction: column; align-items: stretch; }
+  .hero__actions .btn { justify-content: center; }
+  .site-footer__bottom { flex-direction: column; align-items: flex-start; }
+}
+
+@media (min-width: 981px) {
+  .mobile-only { display: none !important; }
+}
+@media (max-width: 980px) {
+  .desktop-only { display: none !important; }
+}

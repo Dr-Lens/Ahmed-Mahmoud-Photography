@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Story Not Found — Ahmed Mahmoud Photography</title>
+<meta name="robots" content="noindex" />
+<link rel="stylesheet" href="/css/reset.css" />
+<link rel="stylesheet" href="/css/variables.css" />
+<link rel="stylesheet" href="/css/typography.css" />
+<link rel="stylesheet" href="/css/layout.css" />
+<link rel="stylesheet" href="/css/components.css" />
+<style>
+  body { display:flex; align-items:center; justify-content:center; min-height:100dvh; }
+</style>
+<script>
+  /**
+   * GitHub Pages has no server-side router. When a deep link like
+   * /weddings/ahmed-and-sara is requested directly, GitHub Pages serves
+   * this 404.html. We redirect back to the app root, passing the original
+   * path in a query param, and the app's router (see js/router.js) restores
+   * it via history.replaceState — so the URL heals to the deep link.
+   */
+  var path = location.pathname + location.search;
+  location.replace("/?p=" + encodeURIComponent(path));
+</script>
+</head>
+<body>
+  <noscript>
+    <div class="state-panel">
+      <h2 class="type-display-s">This story could not be found.</h2>
+      <p>JavaScript is required to browse Ahmed Mahmoud Photography.</p>
+      <a class="btn btn--primary" href="/">Back to Home</a>
+    </div>
+  </noscript>
+</body>
+</html>
